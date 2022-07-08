@@ -1,0 +1,33 @@
+#authPg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:70px;
+}
+#authPg form{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    max-height: 400px;
+    min-height: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 40%;
+    margin-top: 20px;
+}
+#authPg form div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#authLinks{
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+#authPg form a{
+    color: purple;
+    text-decoration: underline;
+    text-align: right;
+}

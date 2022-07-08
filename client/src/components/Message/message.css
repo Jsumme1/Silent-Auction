@@ -1,0 +1,32 @@
+.myMsg {
+    justify-content: flex-end;
+}
+.mine{
+    background-color: rgb(182, 204, 255);
+}
+.theirMsg {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+.theirs{
+    background-color: lightgreen;
+}
+.msgCard {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.msgTime {
+    font-size: 12px;
+    margin: 5px;
+}
+.msgText{
+    font-size:18px;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
