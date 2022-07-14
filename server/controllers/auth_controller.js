@@ -1,4 +1,5 @@
 const { User, ResetToken } = require('../models');
+//imports the models we will be interacting with 
 const bcrypt = require('bcrypt');
 let crypto = require('crypto');
 const nodemailer = require('nodemailer');
@@ -12,6 +13,7 @@ const transport = nodemailer.createTransport({
     }
 });
 
+//declares a variable to hold an object of functions that interact with the database
 const authController = {
     checkUser: function (req, res) {
         if (!req.user) {
@@ -139,4 +141,5 @@ const authController = {
 
 };
 
+//exports the object of functions so other files can access it
 module.exports = authController;
