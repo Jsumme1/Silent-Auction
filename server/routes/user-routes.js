@@ -1,22 +1,14 @@
 const router = require('express').Router();
-const { User } = require('../models');
-var passport = require("../config/passport");
+const {
+    createUser
+} = require("../controllers/user_controller");
+const {
+    checkUser
+} = require("../controllers/auth_controller")
 
-router.post("/signup", async (req, res) => {
-    try {
-        let newUser = await User.create(req.body);
-        res.json(newUser)
-    } catch (error) {
-        console.log(error)
-    }
-})
 
-router.get("/data", function (req, res) {
-    if (!req.user) {
-        res.json("no user here");
-    } else {
-        res.json(req.user);
-    }
-});
+router.route("/signup").post(createUser)
+//
+router.route("/data").get(checkUser);
 
 module.exports = router
