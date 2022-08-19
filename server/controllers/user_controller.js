@@ -3,6 +3,7 @@ const { User } = require('../models');
 
 //declares a variable to hold an object of functions that interact with the database
 const userController = {
+    //
     createUser: async (req, res) => {
         try {
             let newUser = await User.create(req.body);
